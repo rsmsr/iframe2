@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='//fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//rsmsr.github.io/iframe/assets/css/style.css?v=7b80cdb5fb40222244e649c610db353210d39d6f" type="text/css">
+    <!-- <link rel="stylesheet" href="/ii/style.css?v=7b80cdb5fb40222244e649c610db353210d39d6f" media="screen" type="text/css"> -->
+    <!-- <link rel="stylesheet" href="/iframe/assets/css/print.css" media="print" type="text/css"> -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css" type="text/css">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+    <script src="https://s3.ap-south-1.amazonaws.com/rsm-seamless/seamless.min.js" type="text/javascript"></script>
+
+    <style>
+      html, body {
+        height: 100%
+      }
+      #content-wrapper, .inner, #main-content {
+        height: 100%
+      }
+      .code {
+        background-color: #f1f1f1;
+        color: #6c6c6c;
+        border: 1px solid #eeeeee;
+      }
+    </style>
+    <title>iframe by rsmsr</title>
+    <script type="text/javascript">
+      $(function() {
+        var seamless = new Seamless({acceptFrom:'http://j.rsmoorthy.net'})
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="inner">
+        <a href="https://rsmsr.github.io/iframe2/">
+          <h1>iframe testing of PRS forms</h1>
+        </a>
+        <h2></h2>
+          <a href="https://github.com/rsmsr/iframe2" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h2 id="welcome-to-github-pages">A Sample Page for iFrame testing</h2>
+          <p>This is a sample page for testing iFrame, where the PRS form is embedded within the landing page.</p>
+          <p>To add the PRS form in your iFrame, follow these steps</p>
+          <ul>
+            <li>Download "Seamless" javascript package from https://github.com/rsmoorthy/seamless/releases/download/v1.0/seamless_v1.0.min.js and install in your server</li>
+            <li>Include Seamless in your page header, along with jQuery, BootStrap and Bootbox
+              <pre class="code">
+&lt;link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" type="text/css"&gt;
+&lt;link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css" type="text/css"&gt;
+
+&lt;script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"&gt;&lt;/script&gt;
+
+
+&lt;script src="/js/seamless_v1.0.min.js" type="text/javascript"&gt;&lt;/script&gt;
+(OR)
+&lt;script src="https://s3.ap-south-1.amazonaws.com/rsm-seamless/seamless.min.js" type="text/javascript"&gt;&lt;/script&gt;
+              </pre>
+            </li>
+            <li>Include the following script in your html page, at the bottom
+              <pre class="code">
+&lt;script type="text/javascript"&gt;
+  $(function() {
+    var seamless = new Seamless({acceptFrom:'http://prsdemo.isha.in'});
+  });
+&lt;/script&gt;
+              </pre>
+            </li>
+            <li>Include the iframe pointing to prs form, as below.
+              <pre class="code">
+&lt;iframe id="prs" src="http://prsdemo.isha.in/html/forms.html/registration_test1_yaml"
+  scrolling="no" style="overflow: hidden; border: none; height: 80%; width: 100%"/&gt;
+              </pre>
+            </li>
+          </ul>
+          <h1>Sample iFrame Below</h1>
+          <ul>
+            <li>Check how it works on mobile as well as desktop</li>
+            <li>If you press Register, without pressing "I Agree to Terms and Conditions", you will notice a popup
+            appearing on the main window itself.</li>
+            <li>This is a first version, we can improve this a lot as we go along.</li>
+          </ul>
+          <hr>
+
+          <iframe id="prs" src="//j.rsmoorthy.net/html/forms.html/registration_test1_yaml"
+            scrolling="no" style="overflow: hidden; border: none; height: 80%; width: 100%">
+          </iframe>
+
+          <h1>Some more Text below</h1>
+          <ul>
+            <li>This is a sample page and sample test form.</li>
+            <li>This is a first version, we can improve this a lot as we go along.</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
