@@ -17,8 +17,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
-    <!-- <script src="https://s3.ap-south-1.amazonaws.com/rsm-seamless/seamless.min.js" type="text/javascript"></script> -->
-    <script src="//prsdemo.isha.in/js/seamless.min.js" type="text/javascript"></script>
+    <script src="https://s3.ap-south-1.amazonaws.com/rsm-seamless/seamless.min.js" type="text/javascript"></script>
 
     <style>
       html, body {
@@ -36,7 +35,7 @@
     <title>iframe by rsmsr</title>
     <script type="text/javascript">
       $(function() {
-        var seamless = new Seamless({acceptFrom:['prsdem.isha.in', 'prs.isha.in']})
+        var seamless = new Seamless({acceptFrom:['prsdemo.isha.in', 'prs.isha.in']})
       });
     </script>
   </head>
@@ -77,14 +76,14 @@
               <pre class="code">
 &lt;script type="text/javascript"&gt;
   $(function() {
-    var seamless = new Seamless({acceptFrom:'https://prsdemo.isha.in'});
+    var seamless = new Seamless({acceptFrom:['prsdemo.isha.in', 'prs.isha.in']});
   });
 &lt;/script&gt;
               </pre>
             </li>
             <li>Include the iframe pointing to prs form, as below.
               <pre class="code">
-&lt;iframe id="prs" src="https://prsdemo.isha.in/html/forms.html/registration_test1_yaml"
+&lt;iframe id="prs" src="https://prsdemo.isha.in/html/forms.html/registration_test1_yaml?_seamless=isha.sadhguru.org"
   scrolling="no" style="overflow: hidden; border: none; height: 80%; width: 100%"/&gt;
               </pre>
             </li>
