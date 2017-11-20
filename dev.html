@@ -82,9 +82,19 @@
 &lt;/script&gt;
               </pre>
             </li>
-            <li>Include the iframe pointing to prs form, as below.
+            <li>Option 1: Include the iframe pointing to prs form, as below (URL Directly specified)
               <pre class="code">
 &lt;iframe id="prs" src="https://prsdemo.isha.in/html/forms.html/registration_test1_yaml?_seamless=isha.sadhguru.org"
+  scrolling="no" style="overflow: hidden; border: none; height: 80%; width: 100%"/&gt;
+              </pre>
+            </li>
+            <li>Option 2: Include the iframe pointing to prs form, but allow url params to be copied
+              <pre class="code">
+&lt;iframe 
+      id="prs"
+      data-src="//prs.isha.in/html/forms.html/registration_test1_yaml"
+      data-params="_seamless=isha.sadhguru.org"
+      data-copyurlparams="1"
   scrolling="no" style="overflow: hidden; border: none; height: 80%; width: 100%"/&gt;
               </pre>
             </li>
@@ -100,8 +110,8 @@
 
           <iframe 
             id="prs"
-            data-src="//prs.isha.in/html/forms.html/registration_mysjpr17_yaml"
-            data-params="_seamless=rsmsr.github.io"
+            data-src="//prs.isha.in/html/forms.html/registration_mysjpr17_yaml?_seamless=rsmsr.github.io"
+            data-arams="_seamless=rsmsr.github.io"
             data-copyurlparams="1"
             scrolling="no" style="overflow: hidden; border: none; height: 80%; width: 100%">
           </iframe>
