@@ -85,6 +85,19 @@
 &lt;/script&gt;
               </pre>
             </li>
+            <li>If there are more than one iframe element, you need to include the appropriate query selector for 
+              the specific iframe, you are interested in. You could do so by:
+              <pre class="code">
+&lt;script type="text/javascript"&gt;
+  $(function() {
+    var seamless = new Seamless({
+      acceptFrom:['prsdemo.isha.in', 'prs.isha.in'],
+      childElement: '#myiframe'    // This is the query selector for my iframe
+    });
+  });
+&lt;/script&gt;
+              </pre>
+            </li>
             <li>Option 1: Include the iframe pointing to prs form, as below (URL Directly specified)
               <pre class="code">
 &lt;iframe id="prs" src="https://prsdemo.isha.in/html/forms.html/registration_test1_yaml?_seamless=isha.sadhguru.org"
